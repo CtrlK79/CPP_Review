@@ -7,7 +7,7 @@ private:
     int y;
 
 public:
-    bool InitMembers(const int xpos, const int ypos);
+    Point(const int xpos, const int ypos);
     int GetX() const;
     int GetY() const;
     bool SetX(const int xpos);
