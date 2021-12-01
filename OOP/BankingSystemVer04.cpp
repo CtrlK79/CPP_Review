@@ -1,5 +1,5 @@
 /*
- * Banking System Ver 0.3
+ * Banking System Ver 0.4
  * Author : Jaewoo Kim
  * Content : OOP Project
  */
@@ -41,16 +41,16 @@ public:
         cusName = new char[strlen(copy.cusName)+1];
         strcpy(cusName, copy.cusName);
     }
-    int GetAccID() {return accID;}
-    void Deposit(int money) {balance += money;}
-    int WithDraw(int money)
+    int GetAccID() const {return accID;}
+    void Deposit(const int money) {balance += money;}
+    int WithDraw(const int money)
     {
         if(balance<money)
             return 0;
         
         balance -= money; return money;
     }
-    void ShowAccInfo()
+    void ShowAccInfo() const
     {
         cout<<"계좌ID: "<<accID<<endl;
         cout<<"이름: "<<cusName<<endl;
