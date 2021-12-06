@@ -4,9 +4,15 @@
  * File Ver : 0.8
  */
 
+#include "BankingCommonDecl.h"
 #include "AccountHandler.h"
+#include "Account.h"
+#include "NormalAccount.h"
+#include "HighCreditAccount.h"
+#include "String.h"
+#include "BoundCheckArray.h"
 
-AccountHandler::AccountHandler() : accNum(0), accArr(100) {}
+AccountHandler::AccountHandler() {}
 void AccountHandler::ShowMenu(void) const
 {
     cout<<"-----Menu-----"<<endl;
@@ -20,7 +26,7 @@ void AccountHandler::MakeAccount(void)
 {
     int id;
     int choice;
-    char name[NAME_LEN];
+    String name;
     int balance;
     double ratio;
     cout<<"[계좌종류선택]"<<endl;

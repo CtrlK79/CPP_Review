@@ -10,18 +10,16 @@
 #include <iostream>
 #include <cstring>
 #include <cstdlib>
-#include "AccountHandler.h"
-#include "BoundCheckPointPtrArray.h"
-#include "Account.h"
-#include "NormalAccount.h"
-#include "HighCreditAccount.h"
 
 using std::cout;
 using std::cin;
 using std::endl;
 using std::strlen;
 using std::strcpy;
+using std::strcmp;
 using std::exit;
+using std::ostream;
+using std::istream;
 const int NAME_LEN = 20;
 
 enum {MAKE=1, DEPOSIT, WITHDRAW, INQUIRE, EXIT};
